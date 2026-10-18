@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a la Ingeniería de Sistemas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+    <!-- Encabezado y Navegación Principal -->
+    <header class="navbar">
+        <div class="logo">
+            <h2>Introducción a la <span>Ingeniería de Sistemas</span></h2>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#inicio" data-i18n="nav_home">Inicio</a></li>
+                <li><a href="#modulos" data-i18n="nav_modules">Módulos</a></li>
+                <li><a href="#hojas-de-vida" data-i18n="nav_cv">Hojas de Vida</a></li>
+                <li><a href="#prompts" data-i18n="nav_prompts">Prompts</a></li>
+                <li><a href="#contacto" data-i18n="nav_contact">Contacto</a></li>
+            </ul>
+        </nav>
+        <!-- Selector de Idioma -->
+        <div class="lang-selector">
+            <button id="btn-lang" onclick="toggleLanguage()">ES / EN</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sección 1: Inicio / Bienvenida -->
+        <section id="inicio" class="hero-section">
+            <div class="container hero-content">
+                <h1 data-i18n="hero_title">Introducción a la Ingeniería de Sistemas</h1>
+                <p data-i18n="hero_desc">Explora los fundamentos del pensamiento sistémico, el contexto empresarial y la evolución de las tecnologías de la información.</p>
+                <a href="#modulos" class="btn btn-primary" data-i18n="hero_btn">Ver Módulos Académicos</a>
+            </div>
+        </section>
+
+        <!-- Sección 2: Módulos Académicos Desplegables -->
+        <section id="modulos" class="container section-padding">
+            <h2 class="section-title" data-i18n="mod_title">Módulos Académicos</h2>
+            <p class="section-subtitle" data-i18n="mod_subtitle">Haz clic en cada módulo para desplegar y consultar sus temas detallados.</p>
+
+            <div class="accordion-container">
+                
+                <!-- MÓDULO 1 DESPLEGABLE -->
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span><strong>Módulo 1:</strong> UNIDAD 1: Fundamentos y Pensamiento Sistémico</span>
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <ul class="topic-list">
+                            <li><strong>1.1. ¿Qué es la ingeniería?</strong> <p>Aplicación de conocimientos científicos y matemáticos para resolver problemas de manera práctica e innovadora.</p></li>
+                            <li><strong>1.2. Historia y evolución de la ingeniería de sistemas:</strong> <p>Desde los primeros desarrollos de computación hasta el enfoque holístico actual en arquitectura de software y redes.</p></li>
+                            <li><strong>1.3. Ingeniería de sistemas vs. otras ramas:</strong> <p>A diferencia de la civil o mecánica, se enfoca en sistemas abstractos, lógica de información y software.</p></li>
+                            <li><strong>1.4. ¿Qué problemas resuelve?:</strong> <p>Optimización de procesos, automatización, gestión masiva de datos e integración de tecnología.</p></li>
+                            <li><strong>1.5. Pensamiento sistémico:</strong> <p>Enfoque que analiza las partes de un problema como un todo interconectado.</p></li>
+                            <li><strong>1.6. Introducción al modelado y diagramas de flujo:</strong> <p>Representación visual de algoritmos y procesos de decisión.</p></li>
+                            <li><strong>1.7. Teoría General de Sistemas (TGS):</strong> <p>Estudio interdisciplinario de los principios que regulan los sistemas en cualquier campo.</p></li>
+                            <li><strong>1.8. Componentes y tipos de sistemas de información:</strong> <p>Hardware, software, datos, personas y procedimientos trabajando juntos.</p></li>
+                            <li><strong>1.9. La empresa como sistema:</strong> <p>Análisis de organizaciones como conjuntos de departamentos e insumos interrelacionados.</p></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- MÓDULO 2 DESPLEGABLE -->
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span><strong>Módulo 2:</strong> UNIDAD 2: El Ingeniero en Contexto Empresarial y Social</span>
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <ul class="topic-list">
+                            <li><strong>2.1. El ingeniero de sistemas amigoniano:</strong> <p>Profesional formado con principios éticos, sentido humanista y responsabilidad social.</p></li>
+                            <li><strong>2.2. Perfil del ingeniero amigoniano:</strong> <p>Líder capaz de diseñar soluciones tecnológicas sostenibles orientadas al bienestar común.</p></li>
+                            <li><strong>2.3. Perfiles y roles ocupacionales:</strong> <p>Desarrollador, arquitecto de software, administrador de BD, analista de datos, especialista en ciberseguridad y DevOps.</p></li>
+                            <li><strong>2.4. Impacto social de la tecnología:</strong> <p>Análisis de cómo el software y la conectividad transforman comunidades y la economía.</p></li>
+                            <li><strong>2.6. Netiqueta y comunicación digital:</strong> <p>Normas éticas y protocolos de comportamiento profesional en entornos virtuales.</p></li>
+                            <li><strong>2.7. Gestión de archivos y ofimática básica:</strong> <p>Uso eficiente de herramientas digitales para la organización y documentación de proyectos.</p></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- MÓDULO 3 DESPLEGABLE -->
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span><strong>Módulo 3:</strong> UNIDAD 3: Evolución de las TIC y Sistemas Informáticos</span>
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <ul class="topic-list">
+                            <li><strong>3.1. Las TIC desde la perspectiva del ingeniero:</strong> <p>Uso estratégico de tecnologías de la información para conectar y procesar datos masivos.</p></li>
+                            <li><strong>3.2. Sistemas computacionales como sistema:</strong> <p>Interacción armónica entre arquitectura de hardware, sistema operativo y aplicaciones.</p></li>
+                            <li><strong>3.3. Evolución del Hardware y Software (últimos 20 años):</strong> <p>Transición del procesamiento local a la computación en la nube, arquitecturas multinúcleo y virtualización.</p></li>
+                            <li><strong>3.4. Inteligencia Artificial: conceptos y tendencias:</strong> <p>Machine Learning, redes neuronales y automatización inteligente aplicada a la industria.</p></li>
+                            <li><strong>3.5. Mirada actual de los sistemas de información:</strong> <p>Ecosistemas modernos basados en microservicios, seguridad en la nube y Big Data.</p></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Sección 3: Hojas de Vida Participantes (Ana y Sofía) -->
+        <section id="hojas-de-vida" class="container section-padding">
+            <h2 class="section-title" data-i18n="cv_title">Hojas de Vida del Equipo</h2>
+            <p class="section-subtitle" data-i18n="cv_subtitle">Conoce los perfiles profesionales de las autoras del proyecto. Puedes visualizar o descargar sus Hojas de Vida.</p>
+
+            <div class="cv-grid">
+                
+                <!-- Participante 1: Ana Mira Parra -->
+                <div class="cv-card">
+                    <div class="cv-avatar">AMP</div>
+                    <h3>Ana Mira Parra</h3>
+                    <span class="role-badge">Estudiante de Ingeniería de Sistemas</span>
+                    <p>Enfocada en el desarrollo de software, diseño web,bases de datos y soporte técnico.</p>
+                    <div class="cv-actions">
+                        <a href="assets/docs/cv_ana_mira_parra.pdf" target="_blank" class="btn btn-secondary">Abrir / Ver CV</a>
+                        <a href="assets/docs/cv_ana_mira_parra.pdf" download class="btn btn-download">Descargar (PDF)</a>
+                    </div>
+                </div>
+
+                <!-- Participante 2: Sofia Viera Carmona -->
+                <div class="cv-card">
+                    <div class="cv-avatar">SVC</div>
+                    <h3>Sofía Viera Carmona</h3>
+                    <span class="role-badge">Estudiante de Ingeniería de Sistemas</span>
+                    <p>Apasionada por la ciberseguridad, el desarrollo backend, la automatización de procesos y el diseño de soluciones tecnológicas.</p>
+                    <div class="cv-actions">
+                        <a href="assets/docs/cv_sofia_viera_carmona.pdf" target="_blank" class="btn btn-secondary">Abrir / Ver CV</a>
+                        <a href="assets/docs/cv_sofia_viera_carmona.pdf" download class="btn btn-download">Descargar (PDF)</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Sección 4: Prompts Utilizados -->
+        <section id="prompts" class="container section-padding">
+            <h2 class="section-title" data-i18n="prompt_title">Prompts e Instrucciones de Desarrollo</h2>
+            <p class="section-subtitle" data-i18n="prompt_subtitle">Registro de indicaciones utilizadas para estructurar este portal informativo.</p>
+
+            <div class="prompt-box">
+                <h4>Prompt #1: Estructura Inicial e Identidad</h4>
+                <pre><code>"Actúa como un desarrollador web junior de Ingeniería de Sistemas... Crea una página web informativa para la asignatura Introducción a la Ingeniería de Sistemas dividida en 3 módulos desplegables."</code></pre>
+            </div>
+
+            <div class="prompt-box">
+                <h4>Prompt #2: Personalización de Colores e Interfaz Independiente</h4>
+                <pre><code>"Aplica los colores morado pastel (#2A123F, #4B1F6F, #9C8CB9, #C686DD, #F1EDF7). Las secciones deben ser independientes, los módulos deben desplegarse y se deben incluir las hojas de vida de Ana Mira Parra y Sofía Viera Carmona."</code></pre>
+            </div>
+        </section>
+
+        <!-- Sección 5: Formulario de Contacto -->
+        <section id="contacto" class="container section-padding">
+            <h2 class="section-title" data-i18n="contact_title">Contáctanos</h2>
+            <p class="section-subtitle" data-i18n="contact_subtitle">Envíanos tus dudas, quejas, sugerencias o comentarios.</p>
+
+            <div class="form-card center-form">
+                <form id="contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="contact-nombre">Nombre:</label>
+                        <input type="text" id="contact-nombre" name="nombre" required placeholder="Tu nombre completo">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Correo Electrónico:</label>
+                        <input type="email" id="contact-email" name="email" required placeholder="correo@ejemplo.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-tipo">Tipo de Mensaje:</label>
+                        <select id="contact-tipo" name="tipo_mensaje">
+                            <option value="sugerencia">Sugerencia</option>
+                            <option value="queja">Queja</option>
+                            <option value="consulta">Consulta general</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-mensaje">Mensaje:</label>
+                        <textarea id="contact-mensaje" name="mensaje" rows="4" required placeholder="Escribe tu mensaje aquí..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" data-i18n="contact_btn">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de Página con Créditos -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; Introducción a la Ingeniería de Sistemas. Todos los derechos reservados. Universidad Católica Luis Amigó</p>
+            <p class="credits">Desarrollado por: <strong>Ana Mira Parra</strong> & <strong>Sofía Viera Carmona</strong></p>
+        </div>
+    </footer>
+
+    <!-- Archivos JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/lang.js"></script>
+</body>
+</html>

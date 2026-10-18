@@ -1,0 +1,175 @@
+/* Variables con la gama de colores Morado Pastel enviada */
+:root {
+    --color-dark-bg: #2A123F;      /* Morado oscuro profundo para fondos o encabezados */
+    --color-primary: #4B1F6F;      /* Morado intermedio para tarjetas y barra de navegación */
+    --color-medium: #9C8CB9;       /* Morado claro/grisáceo para bordes y detalles */
+    --color-accent: #C686DD;       /* Morado pastel claro para botones y resaltados */
+    --color-light-bg: #F1EDF7;     /* Fondo claro pastel para lectura fluida */
+    --color-white: #FFFFFF;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--color-light-bg);
+    color: var(--color-dark-bg);
+    line-height: 1.6;
+}
+
+/* Alineación global y contenedores centrados */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-padding {
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--color-dark-bg);
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--color-primary);
+    margin-bottom: 40px;
+}
+
+/* Encabezado / Navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-dark-bg);
+    padding: 15px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.logo h2 {
+    color: var(--color-light-bg);
+}
+
+.logo span {
+    color: var(--color-accent);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--color-light-bg);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--color-accent);
+}
+
+/* Botón Selector de Idioma */
+.lang-selector button {
+    background: transparent;
+    border: 2px solid var(--color-accent);
+    color: var(--color-light-bg);
+    padding: 5px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.lang-selector button:hover {
+    background-color: var(--color-accent);
+    color: var(--color-dark-bg);
+}
+
+/* Pie de Página */
+footer {
+    background-color: var(--color-dark-bg);
+    color: var(--color-light-bg);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Estilos para la sección de comentarios */
+.contacto-section {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+#btnEnviar {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#btnEnviar:hover {
+  background-color: #0056b3;
+}
+
+.comentarios-contenedor {
+  margin-top: 30px;
+}
+
+.comentario-item {
+  background-color: #f8f9fa;
+  border-left: 4px solid #007bff;
+  padding: 12px 15px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+}
+
+.comentario-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.comentario-texto {
+  margin: 0;
+  color: #333;
+}
